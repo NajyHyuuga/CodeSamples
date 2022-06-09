@@ -1,0 +1,31 @@
+public class CsvFile
+    {
+
+        public static List<SorMember> getMemberInfoListFromCsvFile(string location)
+        {
+            using (var reader = new StreamReader(location, Encoding.UTF8))
+            {
+                reader.BaseStream.Position = 0;
+
+                var config = new CsvConfiguration(CultureInfo.InvariantCulture)
+                {
+                    Delimiter = "\t", BadDataFound = null, HasHeaderRecord = true, TrimOptions = TrimOptions.Trim, MissingFieldFound = null,
+                    IgnoreBlankLines = true
+                };
+                
+                
+                using (var csv = new CsvReader(reader, config))
+                {
+                    csv.Context.TypeConverterOptionsCache.GetOptions<DateTime?>().NullValues.Add("null");
+                    csv.Context.TypeConverterOptionsCache.GetOptions<bool?>().NullValues.Add("false");
+                    csv.Context.TypeConverterOptionsCache.GetOptions<short?>().NullValues.Add("0");
+                    csv.Context.TypeConverterOptionsCache.GetOptions<decimal?>().NullValues.Add("0");
+                    csv.Context.TypeConverterOptionsCache.GetOptions<int?>().NullValues.Add("0");
+
+                    csv.Context.RegisterClassMap<Mappers>();
+                    var records = csv.GetRecords<SorMember>().ToList();
+                    return records;
+                }
+            }
+        }
+    }
