@@ -1,7 +1,7 @@
 public class CsvFile
     {
 
-        public static List<SorMember> getMemberInfoListFromCsvFile(string location)
+        public static List<ContactInfo> getListFromCsvFile(string location)
         {
             using (var reader = new StreamReader(location, Encoding.UTF8))
             {
@@ -23,7 +23,7 @@ public class CsvFile
                     csv.Context.TypeConverterOptionsCache.GetOptions<int?>().NullValues.Add("0");
 
                     csv.Context.RegisterClassMap<Mappers>();
-                    var records = csv.GetRecords<SorMember>().ToList();
+                    var records = csv.GetRecords<ContactInfo>().ToList();
                     return records;
                 }
             }
