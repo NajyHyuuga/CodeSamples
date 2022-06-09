@@ -1,0 +1,77 @@
+public sealed class Mappers: ClassMap<SorMember>
+    {
+        public Mappers()
+        {
+            Map(x => x.MemberId).Name("Account");
+            Map(x => x.Address1).Name("Address 1");
+            Map(x => x.Address2).Name("Address 2");
+            Map(x => x.BActive).Name("B Active");
+            Map(x => x.City).Name("City");
+            Map(x => x.CountryId).Name("Country ID");
+            Map(x => x.DoNotContact).Name("Do Not Contact");
+            Map(x => x.EmailAddress).Name("Email Address");
+            Map(x => x.FirstName).Name("First Name");
+            Map(x => x.GroupId).Name("Group ID");
+            Map(x => x.LastName).Name("Last Name");
+            Map(x => x.Phone1).Name("Phone 1");
+            Map(x => x.Phone1Dnc).Name("Phone 1 Do Not Contact");
+            Map(x => x.CellPhone).Name("Phone 2");
+            Map(x => x.Phone2Dnc).Name("Phone 2 Do Not Contact");
+            Map(x => x.WorkPhone).Name("Phone 3");
+            Map(x => x.Phone3Dnc).Name("Phone 3 Do Not Contact");
+            Map(x => x.PostalCode).Name("Zip/Postal Code");
+            Map(x => x.State).Name("State");
+            Map(x => x.SecondaryFirstName).Name("Secondary First Name");
+            Map(x => x.SecondaryLastName).Name("Secondary Last Name");
+            Map(x => x.SecondaryEmail).Name("Secondary Email");
+            Map(x => x.EnrollmentDate).Name("Enrollment Date");
+            Map(x => x.ExpirationDate).Name("Expiration Date");
+            Map(x => x.AccountStatus).Name("Account Status");
+            Map(x => x.SourceSystem).Name("Source CRM");
+            Map(x => x.PartnerName).Name("Partner Name");
+            Map(x => x.SubPartner).Name("Sub Partner");
+            Map(x => x.MemberClass).Name("Member Class");
+            Map(x => x.TierLevel).Name("Tier Level");
+            Map(x => x.LeadSourceName).Name("Lead Source");
+            Map(x => x.VacationCashBalance).Name("Available Vacation Cash");
+            Map(x => x.VacationCashExpiringNext60).Name("VC Expiring");
+            Map(x => x.PointsBalance).Name("Available Points");
+            Map(x => x.PointsExpiringNext60).Name("Points Expiring");
+            Map(x => x.LastUpgradeDate).Name("Last Upgrade Date");
+            Map(x => x.LastUpgradeBalance).Name("Balance Due");
+            Map(x => x.FinalPaymentDate).Name("Final Payment Date");
+            Map(x => x.TotalTravelSpend).Name("Total Travel Spend");
+            Map(x => x.ElCidBookingAllowed).Name("ElCid Booking Allowed");
+            Map(x => x.VidaBookingAllowed).Name("Vida Booking Allowed");
+            Map(x => x.LastHotelBookDate).Name("Last hotel booking date");
+            Map(x => x.LastHotelReturnDate).Name("Last Hotel Return Date");
+            Map(x => x.LastCruiseBookDate).Name("Last Cruise booking date");
+            Map(x => x.LastCruiseReturnDate).Name("Last Cruise Return Date");
+            Map(x => x.LastResortBookDate).Name("Last Resort booking date");
+            Map(x => x.LastResortReturnDate).Name("Last Resort Return Date");
+            Map(x => x.LastCarBookDate).Name("Last Car booking date");
+            Map(x => x.LastCarReturnDate).Name("Last Car Return Date");
+            Map(x => x.LastAirBookDate).Name("Last Air booking date");
+            Map(x => x.LastAirReturnDate).Name("Last Air Return Date");
+            Map(x => x.LastWebVisitDate).Name("Last Web visit date");
+            Map(x => x.UniqueVisitsPerDayLast90).Name("Unique Visits per day (Last 90)");
+            Map(x => x.MostRecentHotelClick).Name("Most Recent Hotel Click");
+            Map(x => x.MostRecentCruiseClick).Name("Most Recent Cruise Click");
+            Map(x => x.MostRecentResortClick).Name("Most Recent Resort Click");
+            Map(x => x.EmailClicksLast90).Name("Unique email clicks last 90 days");
+            Map(x => x.ObAni).Name("OB_ANI");
+            Map(x => x.Campaign).Name("Campaign");
+            Map(x => x.CallableDate).Name("Callable Date");
+            Map(x => x.MembershipEligible).Name("Membership Eligible");
+            Map(x => x.ResortName).Name("Resort Name");
+            Map(x => x.PartnerId).Name("Partner ID");
+            Map(x => x.MemberWebsite).Name("MemberWebsite");
+            Map(x => x.OriginalAccountNumber).Name("Original Account Number");
+            Map(x => x.LastSuccess365).Name("Last Success 365");
+            Map(x => x.Attempts90days).Name("Attempts 90 days");
+            Map(x => x.Success90days).Name("Success 90 days");
+            Map(x => x.SuccessDispoDate).Name("Success Dispo Date");
+            Map(x => x.ClubRenewalPrice).Name("Annual Renewal Price");
+            Map(x => x.AutoRenewal).Name("Auto Renewal");
+        }
+    }
